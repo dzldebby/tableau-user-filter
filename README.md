@@ -4,7 +4,7 @@ Automate the tedious process of creating user filters in Tableau, simply by conv
 
 > **Important** Please ensure you have a backup of your Tableau workbook before making any changes. If you have questions, please open an issue in this repository.
 
-> **🎥** Watch the tutorial video on [YouTube](https://youtu.be/pQrJjdo_f2w).
+> **🎥** Watch the introductory video on [YouTube](https://youtu.be/pQrJjdo_f2w).
 
 ## Installation 📥
 
@@ -17,11 +17,8 @@ git clone https://github.com/YourUsername/TableauUserFilterAutomation.git
 cd TableauUserFilterAutomation
 
 # Install requirements (if any)
-# pip install -r requirements.txt
+ pip install -r requirements.txt
 
-# Copy example files (if provided)
-# cp example_access.xml access.xml
-# cp example_output.csv output.csv
 ```
 
 No additional libraries are required as the scripts use Python's standard libraries.
@@ -50,7 +47,7 @@ No additional libraries are required as the scripts use Python's standard librar
     ```
 
 3. Find the resulting XML file at `testaccess.xml`
-4. Copy the generated XML and paste it back into your Tableau workbook file
+4. Copy the generated XML and paste it back into your Tableau workbook file, replacing the original user filter XML snippet
 
 ## File Formats 📄
 
