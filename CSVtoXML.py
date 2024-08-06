@@ -84,7 +84,7 @@ def csv_to_xml(csv_file_path, xml_file_path):
         file.write(pretty_xml)
        
 # File paths
-csv_file_path = 'user.csv'
+csv_file_path = 'sample-user-access.csv'
 xml_file_path = 'testaccess.xml'
 # Run the converter
 csv_to_xml(csv_file_path, xml_file_path)
