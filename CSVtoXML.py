@@ -1,13 +1,24 @@
 import csv
 import xml.etree.ElementTree as ET
 from xml.dom import minidom
-namespace = "http://www.example.com/namespace"
-filter_name = "[User Filter 1]"
+
+# Step 1: Change the name of your user filter here e.g. [User-Filter-1]
+filter_name = "[your-user-filter-name]"
+
+# Step 2: Change this to your domain eg. external
+your_domain = "your-server-name"
+
+# Step 3: Change this to your variable name e.g. [City]
+secondary_group_level = "[your-variable-name]"
+
+
 primary_group_function = "intersection"
 secondary_group_function = "level-members"
-secondary_group_level = "DIVISION"
+
 def create_iscurrentuser_expression(user):
-    return f"ISCURRENTUSER('www.google.com\\{user}')"
+    return f"ISCURRENTUSER('{your_domain}\\{user}')"
+
+
 def csv_to_xml(csv_file_path, xml_file_path):
     # Define the namespace
     # Read CSV file
@@ -73,9 +84,8 @@ def csv_to_xml(csv_file_path, xml_file_path):
         file.write(pretty_xml)
        
 # File paths
-csv_file_path = 'output.csv'
+csv_file_path = 'user.csv'
 xml_file_path = 'testaccess.xml'
 # Run the converter
 csv_to_xml(csv_file_path, xml_file_path)
 print(f"Conversion complete. XML saved to {xml_file_path}")
-
