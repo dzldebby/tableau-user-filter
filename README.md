@@ -72,7 +72,7 @@ You need to customize the following variables in the csvtoxml.py script to match
 
 - In the CSV to XML script, modify these variables to match your Tableau workbook's configuration:
   
-  ```python
+```bash
 # Step 1: Change the name of your user filter here e.g. [User-Filter-1]
 filter_name = "[your-user-filter-name]"
 
@@ -81,14 +81,14 @@ your_domain = "your-server-name"
 
 # Step 3: Change this to your variable name e.g. [City]
 secondary_group_level = "[your-variable-name]"
-  ```
+```
 
 Additional variables you may want to adjust
 
-  ```python
+```bash
 primary_group_function = "intersection"
 secondary_group_function = "level-members"
-  ```
+```
 
 ## Troubleshooting 🔍
 
