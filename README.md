@@ -14,6 +14,7 @@ After you've installed Python, you can set up the Tableau User Filter Automation
 
 ```bash
 git clone https://github.com/YourUsername/TableauUserFilterAutomation.git
+
 cd TableauUserFilterAutomation
 
 # Install requirements (if any)
@@ -63,22 +64,31 @@ user2,Permission3,Permission4
 
 ### XML Format
 
-The XML format follows Tableau's structure for user filters. Our scripts handle the specific formatting required by Tableau, including namespaces and special characters.
+The XML format follows Tableau's structure for user filters. The script will handle the specific formatting required by Tableau, including namespaces and special characters.
 
 ## Customization 🔧
 
-You can customize various aspects of the scripts:
+You need to customize the following variables in the csvtoxml.py script to match your Tableau workbook's configuration:
 
 - In the CSV to XML script, modify these variables to match your Tableau workbook's configuration:
   
   ```python
-  filter_name = "[User Filter 1]"
-  primary_group_function = "intersection"
-  secondary_group_function = "level-members"
-  secondary_group_level = "DIVISION"
+# Step 1: Change the name of your user filter here e.g. [User-Filter-1]
+filter_name = "[your-user-filter-name]"
+
+# Step 2: Change this to your domain eg. external
+your_domain = "your-server-name"
+
+# Step 3: Change this to your variable name e.g. [City]
+secondary_group_level = "[your-variable-name]"
   ```
 
-- Adjust the `create_iscurrentuser_expression` function if your user domain differs from the default "www.google.com".
+Additional variables you may want to adjust
+
+  ```python
+primary_group_function = "intersection"
+secondary_group_function = "level-members"
+  ```
 
 ## Troubleshooting 🔍
 
